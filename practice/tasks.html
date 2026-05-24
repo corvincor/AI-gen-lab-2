@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Самостійна робота — NoSQL бази даних</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+
+    <style>
+      .task-card {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .level {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .easy {
+        background: #4caf50;
+      }
+
+      .medium {
+        background: #ff9800;
+      }
+
+      .hard {
+        background: #f44336;
+      }
+
+      .tip-box {
+        background: #eef5ff;
+        border-left: 5px solid #1976d2;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Завдання для самостійної роботи</h1>
+      <p>Тема: NoSQL бази даних: введення</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="../theory/main-content.html">Теорія</a></li>
+        <li><a href="../tests/tests.html">Тести</a></li>
+        <li><a href="../theory/glossary.html">Глосарій</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Мета самостійної роботи</h2>
+
+        <p>
+          Закріпити знання про NoSQL-бази даних, навчитися аналізувати структуру
+          даних, працювати з JSON-документами та обирати відповідний тип бази
+          даних для різних завдань.
+        </p>
+      </section>
+
+      <div class="tip-box">
+        <strong>Рекомендація:</strong>
+        виконуйте завдання послідовно — від базового рівня до творчих проєктів.
+      </div>
+
+      <section class="task-card">
+        <span class="level easy">Початковий рівень</span>
+
+        <h2>Завдання 1. Основні поняття</h2>
+
+        <ol>
+          <li>Поясніть власними словами, що таке база даних.</li>
+          <li>Що означає термін NoSQL?</li>
+          <li>Чому виникла потреба у створенні NoSQL-систем?</li>
+          <li>
+            Наведіть три приклади використання NoSQL у повсякденному житті.
+          </li>
+          <li>Назвіть основні типи NoSQL-баз даних.</li>
+        </ol>
+      </section>
+
+      <section class="task-card">
+        <span class="level easy">Початковий рівень</span>
+
+        <h2>Завдання 2. Заповнення таблиці</h2>
+
+        <table>
+          <tr>
+            <th>Тип NoSQL</th>
+            <th>Короткий опис</th>
+            <th>Приклад використання</th>
+          </tr>
+
+          <tr>
+            <td>Key-Value</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Документна</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Графова</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Колонкова</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="task-card">
+        <span class="level medium">Середній рівень</span>
+
+        <h2>Завдання 3. Аналіз ситуацій</h2>
+
+        <p>
+          Визначте, який тип NoSQL-бази даних найкраще підходить для кожної
+          ситуації.
+        </p>
+
+        <ol>
+          <li>
+            Соціальна мережа повинна зберігати друзів та зв'язки між
+            користувачами.
+          </li>
+
+          <li>
+            Інтернет-магазин має каталог із тисячами товарів та різними
+            характеристиками.
+          </li>
+
+          <li>Сервіс аналітики обробляє мільярди записів щодня.</li>
+
+          <li>
+            Вебсайт зберігає налаштування користувачів для швидкого доступу.
+          </li>
+        </ol>
+      </section>
+
+      <section class="task-card">
+        <span class="level medium">Середній рівень</span>
+
+        <h2>Завдання 4. Робота з JSON</h2>
+
+        <p>Створіть JSON-документ для учня школи.</p>
+
+        <p>Документ повинен містити:</p>
+
+        <ul>
+          <li>ім'я;</li>
+          <li>вік;</li>
+          <li>клас;</li>
+          <li>список предметів;</li>
+          <li>місто проживання.</li>
+        </ul>
+
+        <p>Приклад структури:</p>
+
+        <pre>
+{
+  "name": "",
+  "age": 0,
+  "class": "",
+  "subjects": [],
+  "city": ""
+}
+</pre
+        >
+      </section>
+
+      <section class="task-card">
+        <span class="level medium">Середній рівень</span>
+
+        <h2>Завдання 5. CRUD-операції</h2>
+
+        <p>
+          Уявіть, що у вас є колекція students. Опишіть словами або псевдокодом:
+        </p>
+
+        <ol>
+          <li>Як додати нового учня.</li>
+          <li>Як знайти учня за ім'ям.</li>
+          <li>Як змінити вік учня.</li>
+          <li>Як видалити запис про учня.</li>
+        </ol>
+      </section>
+
+      <section class="task-card">
+        <span class="level hard">Високий рівень</span>
+
+        <h2>Завдання 6. Порівняння SQL та NoSQL</h2>
+
+        <p>Створіть порівняльну таблицю SQL та NoSQL за такими критеріями:</p>
+
+        <ul>
+          <li>структура даних;</li>
+          <li>масштабованість;</li>
+          <li>швидкість роботи;</li>
+          <li>гнучкість;</li>
+          <li>типові сфери використання.</li>
+        </ul>
+
+        <p>Після заповнення таблиці зробіть короткий висновок.</p>
+      </section>
+
+      <section class="task-card">
+        <span class="level hard">Мініпроєкт</span>
+
+        <h2>Завдання 7. Проєктування бази даних для онлайн-бібліотеки</h2>
+
+        <p>Уявіть, що необхідно створити систему для онлайн-бібліотеки.</p>
+
+        <p>Необхідно:</p>
+
+        <ol>
+          <li>Визначити тип NoSQL-бази даних.</li>
+
+          <li>Пояснити свій вибір.</li>
+
+          <li>Створити приклад документа JSON для книги.</li>
+
+          <li>
+            Передбачити зберігання:
+            <ul>
+              <li>назви книги;</li>
+              <li>автора;</li>
+              <li>жанру;</li>
+              <li>року видання;</li>
+              <li>списку ключових слів.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="task-card">
+        <span class="level hard">Дослідницьке завдання</span>
+
+        <h2>Завдання 8. Сучасні NoSQL-системи</h2>
+
+        <p>Знайдіть інформацію про одну з популярних NoSQL-баз даних:</p>
+
+        <ul>
+          <li>MongoDB</li>
+          <li>Redis</li>
+          <li>Cassandra</li>
+          <li>Neo4j</li>
+          <li>Firebase</li>
+        </ul>
+
+        <p>Підготуйте коротке повідомлення (5–7 речень), у якому зазначте:</p>
+
+        <ol>
+          <li>призначення системи;</li>
+          <li>тип NoSQL-моделі;</li>
+          <li>основні переваги;</li>
+          <li>де використовується.</li>
+        </ol>
+      </section>
+
+      <section class="task-card">
+        <span class="level hard">Творче завдання</span>
+
+        <h2>Завдання 9. Інфографіка</h2>
+
+        <p>Створіть інфографіку або презентаційний слайд на тему:</p>
+
+        <ul>
+          <li>«Типи NoSQL-баз даних» або</li>
+          <li>«SQL vs NoSQL».</li>
+        </ul>
+
+        <p>
+          Можна використати Canva, PowerPoint або генеративні інструменти ШІ.
+        </p>
+      </section>
+
+      <section class="task-card">
+        <span class="level hard">Підсумковий проєкт</span>
+
+        <h2>Завдання 10. Розробка концепції інформаційної системи</h2>
+
+        <p>
+          Запропонуйте власну інформаційну систему, яка могла б використовувати
+          NoSQL.
+        </p>
+
+        <p>Наприклад:</p>
+
+        <ul>
+          <li>соціальна мережа;</li>
+          <li>музичний сервіс;</li>
+          <li>система доставки їжі;</li>
+          <li>онлайн-магазин;</li>
+          <li>освітня платформа.</li>
+        </ul>
+
+        <p>Опишіть:</p>
+
+        <ol>
+          <li>Призначення системи.</li>
+          <li>Які дані будуть зберігатися.</li>
+          <li>Який тип NoSQL буде використано.</li>
+          <li>Чому саме цей тип є найкращим.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Критерії оцінювання</h2>
+
+        <table>
+          <tr>
+            <th>Рівень</th>
+            <th>Кількість балів</th>
+          </tr>
+
+          <tr>
+            <td>Початковий</td>
+            <td>1-3</td>
+          </tr>
+
+          <tr>
+            <td>Середній</td>
+            <td>4-6</td>
+          </tr>
+
+          <tr>
+            <td>Достатній</td>
+            <td>7-9</td>
+          </tr>
+
+          <tr>
+            <td>Високий</td>
+            <td>10-12</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>Навчальний проєкт «NoSQL бази даних: введення» • Самостійна робота</p>
+    </footer>
+  </body>
+</html>

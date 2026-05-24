@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoSQL бази даних: введення</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>NoSQL бази даних: введення</h1>
+      <p>Навчальний ресурс для учнів 10–11 класів</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li>
+          <a href="no-sql-architecture.html">Архітектура NoSQL баз даних</a>
+        </li>
+        <li><a href="mongo-db-as-example.html">MongoDB та робота з JSON</a></li>
+        <li><a href="../tests/tests.html">Тести</a></li>
+        <li><a href="../practice/tasks.html">Практика</a></li>
+        <li><a href="../theory/glossary.html">Глосарій</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Що таке база даних?</h2>
+
+        <p>
+          База даних — це організована сукупність даних, призначена для
+          зберігання, пошуку та обробки інформації.
+        </p>
+
+        <h3>Приклади використання</h3>
+
+        <table>
+          <tr>
+            <th>Система</th>
+            <th>Дані</th>
+          </tr>
+          <tr>
+            <td>Електронний журнал</td>
+            <td>Оцінки та відвідування</td>
+          </tr>
+          <tr>
+            <td>Соціальна мережа</td>
+            <td>Профілі користувачів</td>
+          </tr>
+          <tr>
+            <td>Інтернет-магазин</td>
+            <td>Товари та замовлення</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Що таке NoSQL?</h2>
+
+        <p>
+          NoSQL (Not Only SQL) — це клас нереляційних баз даних, створених для
+          роботи з великими обсягами різнорідної інформації.
+        </p>
+
+        <div class="info-box">
+          <strong>Переваги NoSQL:</strong>
+          <ul>
+            <li>Масштабованість</li>
+            <li>Висока швидкодія</li>
+            <li>Гнучка структура даних</li>
+            <li>Робота з Big Data</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Документно-орієнтовані бази даних</h2>
+
+        <p>Дані зберігаються у форматі JSON.</p>
+
+        <pre><code>{
+  "name": "Марія",
+  "age": 16,
+  "class": "10-А",
+  "city": "Київ"
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Порівняння SQL та NoSQL</h2>
+
+        <table>
+          <tr>
+            <th>SQL</th>
+            <th>NoSQL</th>
+          </tr>
+          <tr>
+            <td>Таблиці</td>
+            <td>Документи, графи</td>
+          </tr>
+          <tr>
+            <td>Фіксована схема</td>
+            <td>Гнучка схема</td>
+          </tr>
+          <tr>
+            <td>Вертикальне масштабування</td>
+            <td>Горизонтальне масштабування</td>
+          </tr>
+        </table>
+        <img
+          src="../resources/images/db_compare.jpeg"
+          alt="Типи NoSQL баз даних"
+          class="responsive-image"
+        />
+      </section>
+
+      <section class="video-section">
+        <h2>Відео: Різниця між SQL та NoSQL</h2>
+
+        <video controls class="video-player">
+          <source src="../resources/videos/sql_no_sql_comparison.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <h2>Контрольні запитання</h2>
+
+        <ol>
+          <li>Що таке NoSQL?</li>
+          <li>Які типи NoSQL-баз існують?</li>
+          <li>Що таке JSON?</li>
+          <li>У чому різниця між SQL та NoSQL?</li>
+        </ol>
+      </section>
+
+      <section>
+        <a href="no-sql-architecture.html">Архітектура NoSQL баз даних</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Навчальний проєкт з інформатики</p>
+    </footer>
+  </body>
+</html>

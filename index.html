@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoSQL бази даних: введення</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        line-height: 1.7;
+      }
+
+      header {
+        background: #1f4e79;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      header h1 {
+        margin-bottom: 10px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .intro {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .navigation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .nav-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .nav-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .nav-card h2 {
+        color: #1f4e79;
+        margin-bottom: 15px;
+      }
+
+      .nav-card p {
+        margin-bottom: 20px;
+      }
+
+      .nav-card a {
+        display: inline-block;
+        text-decoration: none;
+        background: #1f4e79;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 6px;
+      }
+
+      .objectives {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .objectives ul {
+        margin-top: 15px;
+        padding-left: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 40px;
+        background: #1f4e79;
+        color: white;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #1976d2;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>NoSQL бази даних: введення</h1>
+      <p>Навчальний вебресурс для учнів 10–11 класів</p>
+    </header>
+
+    <div class="container">
+      <section class="intro">
+        <h2>Про курс</h2>
+
+        <p>
+          Ласкаво просимо до навчального ресурсу, присвяченого технологіям
+          NoSQL. Тут ви ознайомитеся з сучасними підходами до зберігання даних,
+          навчитеся працювати з JSON-документами, дізнаєтесь про MongoDB та
+          виконаєте практичні завдання.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom: 20px">Навігація по розділах</h2>
+
+        <div class="navigation-grid">
+          <div class="nav-card">
+            <div class="badge">Теорія</div>
+
+            <h2>Вступ до NoSQL</h2>
+
+            <p>
+              Основні поняття, типи NoSQL-баз даних, переваги та сфери
+              використання.
+            </p>
+
+            <a href="theory/main-content.html"> Відкрити розділ </a>
+          </div>
+
+          <div class="nav-card">
+            <div class="badge">Поглиблене вивчення</div>
+
+            <h2>Архітектура NoSQL</h2>
+
+            <p>Реплікація, шардінг, розподілені системи та CAP-теорема.</p>
+
+            <a href="theory/no-sql-architecture.html"> Відкрити розділ </a>
+          </div>
+
+          <div class="nav-card">
+            <div class="badge">Практика</div>
+
+            <h2>MongoDB та JSON</h2>
+
+            <p>Документи JSON, колекції, CRUD-операції та приклади запитів.</p>
+
+            <a href="theory/mongo-db-as-example.html"> Відкрити розділ </a>
+          </div>
+
+          <div class="nav-card">
+            <div class="badge">Довідник</div>
+
+            <h2>Глосарій</h2>
+
+            <p>Словник основних термінів, понять та технологій NoSQL.</p>
+
+            <a href="theory/glossary.html"> Відкрити розділ </a>
+          </div>
+
+          <div class="nav-card">
+            <div class="badge">Контроль знань</div>
+
+            <h2>Тести та тренажер</h2>
+
+            <p>Самоперевірка знань, інтерактивні завдання та кейси.</p>
+
+            <a href="tests/tests.html"> Відкрити розділ </a>
+          </div>
+
+          <div class="nav-card">
+            <div class="badge">Підсумковий контроль</div>
+
+            <h2>Оцінювання</h2>
+
+            <p>Підсумкові завдання для перевірки результатів навчання.</p>
+
+            <a href="practice/tasks.html"> Відкрити розділ </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="objectives">
+        <h2>Очікувані результати навчання</h2>
+
+        <ul>
+          <li>Пояснювати принципи роботи NoSQL-баз даних.</li>
+          <li>Розрізняти основні типи NoSQL-систем.</li>
+          <li>Розуміти принципи роботи MongoDB.</li>
+          <li>Створювати JSON-документи.</li>
+          <li>Виконувати базові CRUD-операції.</li>
+          <li>Обирати відповідний тип бази даних для конкретної задачі.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>Навчальний проєкт «NoSQL бази даних: введення»</p>
+    </footer>
+  </body>
+</html>

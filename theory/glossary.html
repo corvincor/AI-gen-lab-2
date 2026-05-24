@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Глосарій — NoSQL бази даних</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f7fa;
+      }
+
+      header {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        color: #1f4e79;
+      }
+
+      .glossary-item {
+        background: white;
+        margin-bottom: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .term {
+        color: #1f4e79;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .definition {
+        margin-top: 10px;
+      }
+
+      .example {
+        margin-top: 10px;
+        padding: 10px;
+        background: #eef5ff;
+        border-left: 4px solid #1976d2;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #666;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Глосарій термінів</h1>
+      <h2>Тема: NoSQL бази даних: введення</h2>
+      <p>Навчальний ресурс для учнів 10–11 класів</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="../tests/tests.html">Тести</a></li>
+        <li><a href="../practice/tasks.htmll">Практика</a></li>
+        <li><a href="../theory/main-context.html">Глосарій</a></li>
+      </ul>
+    </nav>
+
+    <div class="glossary-item">
+      <div class="term">База даних (Database)</div>
+      <div class="definition">
+        Організована сукупність даних, призначена для зберігання, пошуку,
+        оновлення та обробки інформації.
+      </div>
+      <div class="example">
+        Приклад: база даних учнів школи або каталог товарів інтернет-магазину.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Система керування базами даних (СУБД)</div>
+      <div class="definition">
+        Програмне забезпечення, яке дозволяє створювати, змінювати, зберігати та
+        адмініструвати бази даних.
+      </div>
+      <div class="example">Приклади: MySQL, PostgreSQL, MongoDB.</div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">SQL</div>
+      <div class="definition">
+        Structured Query Language — стандартна мова для роботи з реляційними
+        базами даних.
+      </div>
+      <div class="example">SELECT * FROM Students;</div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">NoSQL</div>
+      <div class="definition">
+        Клас нереляційних баз даних, що дозволяють працювати з великими обсягами
+        структурованих і неструктурованих даних.
+      </div>
+      <div class="example">MongoDB, Cassandra, Neo4j.</div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Реляційна база даних</div>
+      <div class="definition">
+        База даних, у якій інформація зберігається у вигляді таблиць, що
+        пов'язані між собою.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Нереляційна база даних</div>
+      <div class="definition">
+        База даних, яка використовує інші моделі зберігання інформації:
+        документи, графи, ключ-значення або колонки.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Документ</div>
+      <div class="definition">
+        Основна одиниця зберігання інформації у документно-орієнтованих базах
+        даних.
+      </div>
+      <div class="example">
+        <pre>
+{
+  "name": "Марія",
+  "age": 16
+}</pre
+        >
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">JSON</div>
+      <div class="definition">
+        JavaScript Object Notation — текстовий формат представлення даних, який
+        широко використовується в NoSQL-системах.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Колекція (Collection)</div>
+      <div class="definition">
+        Набір документів у документно-орієнтованій базі даних.
+      </div>
+      <div class="example">
+        Колекція «Учні» може містити документи про кожного учня.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Key-Value база даних</div>
+      <div class="definition">
+        NoSQL-модель, у якій дані зберігаються як пари «ключ → значення».
+      </div>
+      <div class="example">
+        <pre>
+theme → dark
+language → uk
+</pre
+        >
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Документно-орієнтована база даних</div>
+      <div class="definition">
+        База даних, що зберігає інформацію у вигляді документів JSON.
+      </div>
+      <div class="example">MongoDB є найпоширенішою документною NoSQL БД.</div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Графова база даних</div>
+      <div class="definition">
+        База даних, що представляє інформацію у вигляді вузлів та зв'язків.
+      </div>
+      <div class="example">
+        Соціальні мережі використовують графові структури для зберігання друзів.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Колонкова база даних</div>
+      <div class="definition">
+        База даних, у якій інформація зберігається за стовпцями, а не за
+        рядками.
+      </div>
+      <div class="example">
+        Використовується для аналітики та роботи з великими даними.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Вузол (Node)</div>
+      <div class="definition">
+        Основний елемент графової бази даних, який представляє об'єкт.
+      </div>
+      <div class="example">
+        Учень, книга або місто можуть бути вузлами графа.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Зв'язок (Relationship)</div>
+      <div class="definition">З'єднання між вузлами графової бази даних.</div>
+      <div class="example">Марія → друг → Андрій</div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Big Data</div>
+      <div class="definition">
+        Надзвичайно великі обсяги даних, які складно обробляти традиційними
+        способами.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Масштабованість (Scalability)</div>
+      <div class="definition">
+        Здатність системи ефективно працювати при збільшенні кількості
+        користувачів та даних.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Горизонтальне масштабування</div>
+      <div class="definition">
+        Додавання нових серверів для збільшення продуктивності системи.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Вертикальне масштабування</div>
+      <div class="definition">
+        Підвищення потужності існуючого сервера шляхом модернізації його
+        обладнання.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Запит (Query)</div>
+      <div class="definition">
+        Команда для отримання, додавання або зміни інформації в базі даних.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">MongoDB</div>
+      <div class="definition">
+        Популярна документно-орієнтована NoSQL база даних, що використовує
+        JSON-подібний формат BSON.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Cassandra</div>
+      <div class="definition">
+        Розподілена колонкова NoSQL база даних, створена для роботи з великими
+        обсягами інформації.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Neo4j</div>
+      <div class="definition">
+        Відома графова база даних для роботи зі складними зв'язками.
+      </div>
+    </div>
+
+    <div class="glossary-item">
+      <div class="term">Firebase</div>
+      <div class="definition">
+        Хмарна платформа для розробки мобільних і вебзастосунків, що містить
+        документні бази даних Firestore та Realtime Database.
+      </div>
+    </div>
+
+    <footer>
+      <p>Навчальний проєкт «NoSQL бази даних: введення»</p>
+    </footer>
+  </body>
+</html>

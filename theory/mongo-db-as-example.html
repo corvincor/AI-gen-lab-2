@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MongoDB та робота з JSON</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MongoDB та робота з JSON</h1>
+      <p>Практичне знайомство з документними NoSQL базами даних</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="main-content.html">Вступ до NoSQL</a></li>
+        <li><a href="no-sql-architecture.html">Архітектура NoSQL</a></li>
+        <li><a href="../practice/tasks.html">Практика</a></li>
+        <li><a href="../tests/tests.html">Тести</a></li>
+        <li><a href="../theory/glossary.html">Глосарій</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Що таке MongoDB?</h2>
+
+        <p>
+          MongoDB — одна з найпопулярніших документно-орієнтованих NoSQL баз
+          даних.
+        </p>
+
+        <p>
+          Замість таблиць і рядків MongoDB використовує
+          <strong>колекції (Collections)</strong> та
+          <strong>документи (Documents)</strong>.
+        </p>
+
+        <div class="info-box">
+          У MongoDB один документ приблизно відповідає одному запису в таблиці
+          SQL.
+        </div>
+      </section>
+
+      <section>
+        <h2>Структура MongoDB</h2>
+
+        <table>
+          <tr>
+            <th>SQL</th>
+            <th>MongoDB</th>
+          </tr>
+
+          <tr>
+            <td>Database</td>
+            <td>Database</td>
+          </tr>
+
+          <tr>
+            <td>Table</td>
+            <td>Collection</td>
+          </tr>
+
+          <tr>
+            <td>Row</td>
+            <td>Document</td>
+          </tr>
+
+          <tr>
+            <td>Column</td>
+            <td>Field</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Що таке JSON?</h2>
+
+        <p>
+          JSON (JavaScript Object Notation) — текстовий формат представлення
+          даних.
+        </p>
+
+        <p>Саме у такому вигляді найчастіше зберігаються документи MongoDB.</p>
+
+        <pre><code>{
+  "name": "Марія",
+  "age": 16,
+  "class": "10-А",
+  "city": "Київ"
+}
+</code></pre>
+
+        <h3>Основні правила JSON</h3>
+
+        <ul>
+          <li>Дані записуються у фігурних дужках { }</li>
+          <li>Ключі беруться в лапки</li>
+          <li>Кожне поле має значення</li>
+          <li>Пари ключ-значення розділяються комами</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Складніші документи</h2>
+
+        <pre><code>{
+  "name": "Марія",
+  "age": 16,
+  "class": "10-А",
+
+  "subjects": [
+    "Інформатика",
+    "Математика",
+    "Фізика"
+  ],
+
+  "address": {
+    "city": "Київ",
+    "street": "Шевченка"
+  }
+}
+</code></pre>
+
+        <p>Документи можуть містити вкладені об'єкти та масиви.</p>
+      </section>
+
+      <section>
+        <h2>CRUD-операції</h2>
+
+        <p>CRUD — це чотири основні операції роботи з даними:</p>
+
+        <table>
+          <tr>
+            <th>Операція</th>
+            <th>Значення</th>
+          </tr>
+
+          <tr>
+            <td>Create</td>
+            <td>Створення даних</td>
+          </tr>
+
+          <tr>
+            <td>Read</td>
+            <td>Читання даних</td>
+          </tr>
+
+          <tr>
+            <td>Update</td>
+            <td>Оновлення даних</td>
+          </tr>
+
+          <tr>
+            <td>Delete</td>
+            <td>Видалення даних</td>
+          </tr>
+        </table>
+        <div>
+          <img
+            src="../resources/images/mongo_crud.jpeg"
+            alt="Типи NoSQL баз даних"
+            class="responsive-image"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Create — додавання документа</h2>
+
+        <pre><code>db.students.insertOne({
+  name: "Марія",
+  age: 16,
+  class: "10-А"
+});
+</code></pre>
+
+        <p>Команда додає новий документ до колекції students.</p>
+      </section>
+
+      <section>
+        <h2>Read — пошук документів</h2>
+
+        <h3>Вивести всі документи</h3>
+
+        <pre><code>db.students.find();
+</code></pre>
+
+        <h3>Знайти конкретного учня</h3>
+
+        <pre><code>db.students.find({
+  name: "Марія"
+});
+</code></pre>
+
+        <h3>Знайти учнів старше 15 років</h3>
+
+        <pre><code>db.students.find({
+  age: { $gt: 15 }
+});
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Update — оновлення документа</h2>
+
+        <pre><code>db.students.updateOne(
+  { name: "Марія" },
+  {
+    $set: {
+      city: "Львів"
+    }
+  }
+);
+</code></pre>
+
+        <p>Команда додає або змінює поле city.</p>
+      </section>
+
+      <section>
+        <h2>Delete — видалення документа</h2>
+
+        <pre><code>db.students.deleteOne({
+  name: "Марія"
+});
+</code></pre>
+
+        <p>Документ буде видалено з колекції.</p>
+      </section>
+
+      <section>
+        <h2>Приклад повного життєвого циклу документа</h2>
+
+        <ol>
+          <li>Створення документа про учня.</li>
+          <li>Пошук документа у базі.</li>
+          <li>Оновлення інформації.</li>
+          <li>Видалення документа після завершення навчання.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Практичне завдання</h2>
+
+        <h3>Колекція "Учні"</h3>
+
+        <p>Створіть 5 документів із такими полями:</p>
+
+        <pre><code>{
+  "name": "",
+  "class": "",
+  "age": 0,
+  "email": ""
+}
+</code></pre>
+
+        <p>Виконайте:</p>
+
+        <ol>
+          <li>Додавання записів.</li>
+          <li>Пошук учнів певного класу.</li>
+          <li>Пошук учнів старших за 15 років.</li>
+          <li>Оновлення електронної адреси.</li>
+          <li>Видалення одного документа.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Підсумок</h2>
+
+        <ul>
+          <li>MongoDB є документною NoSQL базою даних.</li>
+          <li>Дані зберігаються у форматі JSON-подібних документів.</li>
+          <li>Колекції містять документи.</li>
+          <li>
+            CRUD-операції дозволяють створювати, читати, оновлювати та видаляти
+            дані.
+          </li>
+          <li>
+            MongoDB широко використовується у вебдодатках та хмарних сервісах.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Запитання для самоперевірки</h2>
+
+        <ol>
+          <li>Що таке MongoDB?</li>
+          <li>Що таке документ?</li>
+          <li>Для чого використовується JSON?</li>
+          <li>Що означає CRUD?</li>
+          <li>Яка команда використовується для додавання документа?</li>
+          <li>Як знайти всі документи колекції?</li>
+          <li>Як оновити поле документа?</li>
+          <li>Як видалити документ?</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>Навчальний проєкт «NoSQL бази даних: введення»</p>
+    </footer>
+  </body>
+</html>
